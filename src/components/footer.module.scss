@@ -1,0 +1,22 @@
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.flower {
+  margin-left: 0.5rem;
+  margin-bottom: -0.2rem;
+  animation: spin 4s linear infinite forwards;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

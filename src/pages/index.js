@@ -1,5 +1,15 @@
 import React from "react"
-
-export default function Home() {
-  return <div>Hello world!</div>
+import Hero from "../components/Hero"
+import Layout from "../components/Layout"
+// import "../styles/index.scss"
+function index() {
+  return (
+    <div>
+      <Layout>
+        <Hero />
+      </Layout>
+    </div>
+  )
 }
+
+export default index
