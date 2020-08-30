@@ -16,6 +16,7 @@ html {
 
 body {
   overflow: hidden;
+  background-image: url(../icons/bg.png);
 }
 
 @font-face {
@@ -32,15 +33,16 @@ body {
 
 h1 {
   font-family: "monument";
-  font-size: 144px;
+  font-size: 14.4rem;
 }
+
 body #magicPointer {
-  z-index: 1000 !important;
+  z-index: 0 !important;
   background: red;
   mix-blend-mode: difference;
 }
 body #magicMouseCursor {
   border: 2px solid red;
-  z-index: 1000 !important;
+  z-index: 0 !important;
   mix-blend-mode: difference;
 }

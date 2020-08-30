@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Hero from "../components/Hero"
-import Layout from "../components/Layout"
+import Layout from "../layouts/index"
+import aboutStyles from "../components/about.module.scss"
+import gsap from "gsap"
+import AboutContent from "../components/AboutContent"
 // import "../styles/index.scss"
 function about() {
   return (
     <div>
-      <Layout>
-        <h1 style={{ marginTop: "20rem" }}>About Page</h1>
+      <Layout location="/about">
+        <AboutContent />
       </Layout>
     </div>
   )

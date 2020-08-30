@@ -22,12 +22,12 @@
     font-size: 1.6rem;
     margin-left: 5rem;
     list-style: none;
-    cursor: pointer;
+    // cursor: pointer;
     transition: color 0.2s ease-in-out;
     color: black;
 
     &:hover {
-      color: red;
+      color: red !important;
     }
   }
 }
