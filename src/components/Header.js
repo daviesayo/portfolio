@@ -1,28 +1,56 @@
 import React from "react"
 import headerStyles from "./header.module.scss"
+import { Link } from "gatsby"
 import "../styles/index.scss"
 function Header() {
   return (
     <header className={headerStyles.header}>
-      <div className="logo">
-        <h2 style={{ lineHeight: "1.4rem" }}>
+      <Link to="/" className={headerStyles.logo}>
+        <h2
+          className="magic-hover magic-hover__square"
+          style={{ lineHeight: "1.4rem" }}
+        >
           MICHAEL <br />
           AKINTOMO
         </h2>
-      </div>
+      </Link>
       <nav>
         <ul className={headerStyles.nav}>
           <li className={headerStyles.li}>
-            <a className={headerStyles.a}>Home</a>
+            <Link
+              className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
+              activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a>About</a>
+            <Link
+              className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
+              activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
+              to="/about"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <a>Work</a>
+            <Link
+              className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
+              activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
+              to="/work"
+            >
+              Work
+            </Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link
+              className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
+              activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

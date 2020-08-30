@@ -9,13 +9,19 @@ function Hero() {
   return (
     <div className={heroStyles.container}>
       <h1 className={heroStyles.intro}>
-        Hello<span style={{ color: "red" }}>.</span>
-        <br /> I'm
+        Hello
+        <span className={heroStyles.intro} style={{ color: "red" }}>
+          .
+        </span>
         <br />
-        <span style={{ color: "red" }}>Michael</span>
+        I'm
+        <br />
+        <span className={heroStyles.intro} style={{ color: "red" }}>
+          Michael
+        </span>
       </h1>
       <div className={heroStyles.desc}>
-        <img src={arrow} height="120px" width="120px" />
+        <img src={arrow} height="130px" width="130px" />
         <p className={heroStyles.p}>
           I'm a <br />
           <Typical
@@ -37,7 +43,7 @@ function Hero() {
         </p>
       </div>
       <div>
-        <img src={nameSpinner2} className={heroStyles.amper} />
+        {/* <img src={nameSpinner2} className={heroStyles.amper} /> */}
         {/* <h1 className={heroStyles.amper}>&</h1> */}
       </div>
     </div>
