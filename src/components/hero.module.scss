@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "bask";
+  src: url(../fonts/bask.ttf);
+}
 .container {
   max-width: 1440px;
   width: 100%;
@@ -11,7 +15,40 @@
   //   background: red;
   margin: 0 auto;
 }
+.desc {
+  // transform: translateX(50%);
+  display: flex;
+  p {
+    align-self: flex-end;
+    margin-left: 1rem;
+  }
+}
 p {
   text-transform: uppercase;
   font-size: 2rem;
+}
+.amper {
+  height: 70rem;
+  position: absolute;
+  top: 50%;
+  right: -30%;
+  transform: translateY(-50%);
+  z-index: -1;
+  font-size: 80rem;
+  opacity: 0.6;
+  animation: spin 8s cubic-bezier(0.87, 0.32, 0, 0.39) infinite forwards;
+}
+// cubic-bezier(0, 1.95, 1, -1.49)
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.intro {
+  line-height: 14.5rem;
+  letter-spacing: 0.8rem;
 }
