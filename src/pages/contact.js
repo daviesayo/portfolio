@@ -6,9 +6,7 @@ import ContactContent from "../components/ContactContent"
 function contact() {
   return (
     <div>
-      <Layout location="/contact">
-        <ContactContent />
-      </Layout>
+      <ContactContent />
     </div>
   )
 }

@@ -20,7 +20,7 @@ function AboutContent() {
     })
   }, [line1, para])
   return (
-    <div>
+    <div className={aboutStyles.aboutBody}>
       <h1 style={{ marginTop: "20rem" }}>
         <div className={aboutStyles.line_wrap}>
           <div ref={el => (line1 = el)} className={aboutStyles.line1}>

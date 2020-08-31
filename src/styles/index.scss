@@ -15,7 +15,8 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-image: url(../icons/bg.png);
 }
 

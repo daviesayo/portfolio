@@ -13,11 +13,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/layouts/index.js`),
-      },
-    },
+    "gatsby-plugin-layout",
   ],
 }

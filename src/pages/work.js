@@ -6,9 +6,7 @@ import WorkContent from "../components/WorkContent"
 function work() {
   return (
     <div>
-      <Layout location="/work">
-        <WorkContent />
-      </Layout>
+      <WorkContent />
     </div>
   )
 }

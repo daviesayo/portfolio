@@ -1,7 +1,19 @@
-.about_para {
+.contact_para {
   margin-top: 15rem;
   max-width: 50%;
   font-size: 1.6rem;
+}
+.social_links {
+  padding-top: 2rem;
+  list-style: none;
+  font-size: 1.8rem;
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      color: red;
+    }
+  }
 }
 .line_wrap {
   overflow: hidden;

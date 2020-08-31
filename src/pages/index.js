@@ -6,13 +6,7 @@ import { gsap } from "gsap"
 import { CSSTransition } from "react-transition-group"
 // import "../styles/index.scss"
 function index() {
-  return (
-    <div>
-      <Layout location="/">
-        <Hero />
-      </Layout>
-    </div>
-  )
+  return <Hero />
 }
 
 export default index

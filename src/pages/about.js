@@ -6,13 +6,7 @@ import gsap from "gsap"
 import AboutContent from "../components/AboutContent"
 // import "../styles/index.scss"
 function about() {
-  return (
-    <div>
-      <Layout location="/about">
-        <AboutContent />
-      </Layout>
-    </div>
-  )
+  return <AboutContent />
 }
 
 export default about
