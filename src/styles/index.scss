@@ -38,12 +38,12 @@ h1 {
 }
 
 body #magicPointer {
-  z-index: 0 !important;
+  z-index: 11 !important;
   background: red;
   mix-blend-mode: difference;
 }
 body #magicMouseCursor {
   border: 2px solid red;
-  z-index: 0 !important;
+  z-index: 11 !important;
   mix-blend-mode: difference;
 }

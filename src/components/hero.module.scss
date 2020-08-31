@@ -45,7 +45,8 @@ p {
   transform: translateY(-50%);
   z-index: 1;
   font-size: 80rem;
-  opacity: 0.6;
+  opacity: 1;
+  mix-blend-mode: overlay;
   animation: spin 8s cubic-bezier(0.87, 0.32, 0, 0.39) infinite forwards;
 }
 // cubic-bezier(0, 1.95, 1, -1.49)
