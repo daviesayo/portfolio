@@ -18,6 +18,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-image: url(../icons/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @font-face {
@@ -35,6 +37,7 @@ body {
 h1 {
   font-family: "monument";
   font-size: 14.4rem;
+  // -webkit-backface-visibility: hidden;
 }
 
 body #magicPointer {

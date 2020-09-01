@@ -1,6 +1,25 @@
 import React, { useEffect, useRef } from "react"
 // import Layout from "../layouts/index"
+import htmlIcon from "../icons/html_icon.png"
+import cssIcon from "../icons/css_icon.png"
+import jsIcon from "../icons/js_icon.png"
+import gatsbyIcon from "../icons/gatsby.png"
+import graphQLIcon from "../icons/graphQL_Logo.png"
+import gitIcon from "../icons/git_icon.png"
+import csharpIcon from "../icons/csharp_icon.png"
+import javaIcon from "../icons/java_icon.png"
+import npmIcon from "../icons/npm_icon.png"
+import unityIcon from "../icons/unity_icon.png"
+import psIcon from "../icons/photoshop_icon.png"
+import aiIcon from "../icons/illustrator_icon.png"
+import aeIcon from "../icons/ae_icon.png"
+import figmaIcon from "../icons/figma_icon.png"
+import c4dIcon from "../icons/c4d_icon.png"
+import gsapIcon from "../icons/gsap_icon.png"
+import cmsIcon from "../icons/contentful_icon.png"
+import Typical from "react-typical"
 import aboutStyles from "./about.module.scss"
+import { Link } from "gatsby"
 import gsap from "gsap"
 function AboutContent() {
   let line1 = useRef(null)
@@ -24,18 +43,130 @@ function AboutContent() {
       <h1 style={{ marginTop: "20rem" }}>
         <div className={aboutStyles.line_wrap}>
           <div ref={el => (line1 = el)} className={aboutStyles.line1}>
-            About Page<span style={{ color: "red" }}>.</span>
+            About Me<span style={{ color: "red" }}>.</span>
           </div>
         </div>
       </h1>
+      <p className={aboutStyles.about_para}>
+        <Typical
+          loop={1}
+          wrapper="b"
+          steps={["I'm a Front-End Developer based in London, England.", 1000]}
+        ></Typical>
+      </p>
       <p ref={el => (para = el)} className={aboutStyles.about_para}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        I have a passion for web design and creating asthetically pleasing,
+        interactive and responsive layouts. I recently graduated with a first
+        class degree in Computer Science and am looking for an opportunity to
+        work with a Javascript framework in a team with a focus on technical
+        development and growth.
+      </p>
+      <div className={aboutStyles.gridContainer}>
+        <p className={aboutStyles.skillsTitle}>
+          <strong>SKILLS / TECHNOLOGIES</strong>
+        </p>
+        <div className={aboutStyles.wrapper}>
+          <div className={aboutStyles.skill}>
+            <img src={htmlIcon} height="64px" />
+            <p>HTML</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={cssIcon} height="64px" />
+            <p>CSS</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={jsIcon} height="64px" />
+            <p>JAVASCRIPT</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"
+              height="64px"
+            />
+            <p>SASS</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
+              height="64px"
+            />
+            <p>BOOTSTRAP</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img
+              src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+              height="64px"
+            />
+            <p>REACT</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={gatsbyIcon} height="64px" />
+            <p>GATSBY</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={graphQLIcon} height="64px" />
+            <p>GRAPHQL</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={gitIcon} height="64px" />
+            <p>GIT</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={csharpIcon} height="64px" />
+            <p>C SHARP</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={javaIcon} height="64px" />
+            <p>JAVA</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={npmIcon} height="64px" />
+            <p>NPM</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={unityIcon} height="64px" />
+            <p>UNITY</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={psIcon} height="64px" />
+            <p>PHOTOSHOP</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={aiIcon} height="64px" />
+            <p>ILLUSTRATOR</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={aeIcon} height="64px" />
+            <p>AFTER EFFECTS</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={figmaIcon} height="64px" />
+            <p>FIGMA</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={c4dIcon} height="64px" />
+            <p>CINEMA 4D</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={gsapIcon} height="64px" />
+            <p>GSAP</p>
+          </div>
+          <div className={aboutStyles.skill}>
+            <img src={cmsIcon} height="64px" />
+            <p>CONTENTFUL</p>
+          </div>
+        </div>
+      </div>
+
+      <p className={aboutStyles.about_para2}>
+        Ultimately, as a developer I'd like to progress into creating mobile
+        applications as well as web apps and also incorporate my other passion
+        in 3D art into my development work to create stunning sites to take user
+        experience and interactions to the next level.
+      </p>
+      <p className={aboutStyles.about_para2}>
+        If you'd like to learn more about what makes me tick <br />
+        <Link to="/contact">feel free to get in touch.</Link>
       </p>
     </div>
   )

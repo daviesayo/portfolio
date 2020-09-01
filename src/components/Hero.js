@@ -67,7 +67,7 @@ function Hero() {
         <div className={heroStyles.desc_wrap}>
           <div ref={el => (desc = el)} className={heroStyles.desc}>
             <img src={arrow} height="130px" width="130px" />
-            <p className={heroStyles.p}>
+            <p className={heroStyles.heroPara}>
               I'm a <br />
               <Typical
                 loop={Infinity}
