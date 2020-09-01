@@ -56,10 +56,10 @@
     }
 
     img {
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     &:hover img {
-      transform: scale(1.2);
+      transform: rotate(-5deg) scale(1.1);
       + p {
         color: red;
       }
