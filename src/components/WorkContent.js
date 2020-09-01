@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react"
 // import Layout from "../layouts/index"
 import workStyles from "./work.module.scss"
 import gsap from "gsap"
+import { useStaticQuery, graphql } from "gatsby"
 function WorkContent() {
   let line1 = useRef(null)
   let para = useRef(null)
@@ -19,6 +20,29 @@ function WorkContent() {
       y: -100,
     })
   }, [line1, para])
+
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPortfolioWork {
+        edges {
+          node {
+            projectNo
+            thumbnail {
+              file {
+                url
+              }
+            }
+            projectTitle
+            projectType
+            projectDesc
+            githubLink
+            liveLink
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className={workStyles.workBody}>
       <h1 style={{ marginTop: "20rem" }}>
@@ -38,118 +62,42 @@ function WorkContent() {
         mollit anim id est laborum.
       </p>
       <div className={workStyles.grid}>
-        <div className={workStyles.card}>
-          <h2 className={workStyles.num}>01</h2>
-          <div className={workStyles.card__inner}>
-            <div className={workStyles.inner__thumbnail}></div>
-            <div className={workStyles.inner__desc}>
-              <div className={workStyles.inner__desc__left}>
-                <h2 className={workStyles.projectTitle}>Project 1</h2>
-                <p>Web Design</p>
-              </div>
-              <div className={workStyles.inner__desc__right}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
-                  temporibus id?
-                </p>
-                <div className={workStyles.buttons}>
-                  {" "}
-                  <button>
-                    <a href="#">See Code</a>
-                  </button>
-                  <button>
-                    <a href="#">Live Site</a>
-                  </button>
+        {data.allContentfulPortfolioWork.edges.map(({ node }) => {
+          return (
+            <div className={workStyles.card}>
+              <h2 className={workStyles.num}>{`0${node.projectNo}`}</h2>
+              <div className={workStyles.card__inner}>
+                <div className={workStyles.inner__thumbnail}>
+                  <img src={node.thumbnail.file.url} />
+                </div>
+                <div className={workStyles.inner__desc}>
+                  <div className={workStyles.inner__desc__left}>
+                    <h2 className={workStyles.projectTitle}>
+                      {node.projectTitle}
+                    </h2>
+                    <p>{node.projectType}</p>
+                  </div>
+                  <div className={workStyles.inner__desc__right}>
+                    <p>{node.projectDesc}</p>
+                    <div className={workStyles.buttons}>
+                      {" "}
+                      <button>
+                        <a href={node.githubLink} target="_blank">
+                          See Code
+                        </a>
+                      </button>
+                      <button>
+                        <a href={node.liveLink} target="_blank">
+                          Live Site
+                        </a>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className={workStyles.card}>
-          <h2 className={workStyles.num}>02</h2>
-          <div className={workStyles.card__inner}>
-            <div className={workStyles.inner__thumbnail}></div>
-            <div className={workStyles.inner__desc}>
-              <div className={workStyles.inner__desc__left}>
-                <h2 className={workStyles.projectTitle}>Project 2</h2>
-                <p>Web Design</p>
-              </div>
-              <div className={workStyles.inner__desc__right}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
-                  temporibus id?
-                </p>
-                <div className={workStyles.buttons}>
-                  {" "}
-                  <button>
-                    <a href="#">See Code</a>
-                  </button>
-                  <button>
-                    <a href="#">Live Site</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={workStyles.card}>
-          <h2 className={workStyles.num}>03</h2>
-          <div className={workStyles.card__inner}>
-            <div className={workStyles.inner__thumbnail}></div>
-            <div className={workStyles.inner__desc}>
-              <div className={workStyles.inner__desc__left}>
-                <h2 className={workStyles.projectTitle}>Project 3</h2>
-                <p>Web Design</p>
-              </div>
-              <div className={workStyles.inner__desc__right}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
-                  temporibus id?
-                </p>
-                <div className={workStyles.buttons}>
-                  {" "}
-                  <button>
-                    <a href="#">See Code</a>
-                  </button>
-                  <button>
-                    <a href="#">Live Site</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={workStyles.card}>
-          <h2 className={workStyles.num}>04</h2>
-          <div className={workStyles.card__inner}>
-            <div className={workStyles.inner__thumbnail}></div>
-            <div className={workStyles.inner__desc}>
-              <div className={workStyles.inner__desc__left}>
-                <h2 className={workStyles.projectTitle}>Project 4</h2>
-                <p>Web Design</p>
-              </div>
-              <div className={workStyles.inner__desc__right}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
-                  temporibus id?
-                </p>
-                <div className={workStyles.buttons}>
-                  {" "}
-                  <button>
-                    <a href="#">See Code</a>
-                  </button>
-                  <button>
-                    <a href="#">Live Site</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          )
+        })}
       </div>
     </div>
   )
