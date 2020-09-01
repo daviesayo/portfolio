@@ -20,7 +20,7 @@ function WorkContent() {
     })
   }, [line1, para])
   return (
-    <div>
+    <div className={workStyles.workBody}>
       <h1 style={{ marginTop: "20rem" }}>
         <div className={workStyles.line_wrap}>
           <div ref={el => (line1 = el)} className={workStyles.line1}>
