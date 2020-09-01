@@ -37,6 +37,120 @@ function WorkContent() {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <div className={workStyles.grid}>
+        <div className={workStyles.card}>
+          <h2 className={workStyles.num}>01</h2>
+          <div className={workStyles.card__inner}>
+            <div className={workStyles.inner__thumbnail}></div>
+            <div className={workStyles.inner__desc}>
+              <div className={workStyles.inner__desc__left}>
+                <h2 className={workStyles.projectTitle}>Project 1</h2>
+                <p>Web Design</p>
+              </div>
+              <div className={workStyles.inner__desc__right}>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
+                  temporibus id?
+                </p>
+                <div className={workStyles.buttons}>
+                  {" "}
+                  <button>
+                    <a href="#">See Code</a>
+                  </button>
+                  <button>
+                    <a href="#">Live Site</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={workStyles.card}>
+          <h2 className={workStyles.num}>02</h2>
+          <div className={workStyles.card__inner}>
+            <div className={workStyles.inner__thumbnail}></div>
+            <div className={workStyles.inner__desc}>
+              <div className={workStyles.inner__desc__left}>
+                <h2 className={workStyles.projectTitle}>Project 2</h2>
+                <p>Web Design</p>
+              </div>
+              <div className={workStyles.inner__desc__right}>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
+                  temporibus id?
+                </p>
+                <div className={workStyles.buttons}>
+                  {" "}
+                  <button>
+                    <a href="#">See Code</a>
+                  </button>
+                  <button>
+                    <a href="#">Live Site</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={workStyles.card}>
+          <h2 className={workStyles.num}>03</h2>
+          <div className={workStyles.card__inner}>
+            <div className={workStyles.inner__thumbnail}></div>
+            <div className={workStyles.inner__desc}>
+              <div className={workStyles.inner__desc__left}>
+                <h2 className={workStyles.projectTitle}>Project 3</h2>
+                <p>Web Design</p>
+              </div>
+              <div className={workStyles.inner__desc__right}>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
+                  temporibus id?
+                </p>
+                <div className={workStyles.buttons}>
+                  {" "}
+                  <button>
+                    <a href="#">See Code</a>
+                  </button>
+                  <button>
+                    <a href="#">Live Site</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={workStyles.card}>
+          <h2 className={workStyles.num}>04</h2>
+          <div className={workStyles.card__inner}>
+            <div className={workStyles.inner__thumbnail}></div>
+            <div className={workStyles.inner__desc}>
+              <div className={workStyles.inner__desc__left}>
+                <h2 className={workStyles.projectTitle}>Project 4</h2>
+                <p>Web Design</p>
+              </div>
+              <div className={workStyles.inner__desc__right}>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Suscipit numquam, laborum quis velit eos ad rem debitis quas
+                  temporibus id?
+                </p>
+                <div className={workStyles.buttons}>
+                  {" "}
+                  <button>
+                    <a href="#">See Code</a>
+                  </button>
+                  <button>
+                    <a href="#">Live Site</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

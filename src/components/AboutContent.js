@@ -166,7 +166,9 @@ function AboutContent() {
       </p>
       <p className={aboutStyles.about_para2}>
         If you'd like to learn more about what makes me tick <br />
-        <Link to="/contact">feel free to get in touch.</Link>
+        <Link to="/contact" stylr={{ color: "red" }}>
+          feel free to get in touch <i class="fas fa-long-arrow-alt-right"></i>
+        </Link>
       </p>
     </div>
   )
