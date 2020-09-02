@@ -3,6 +3,9 @@ import React, { useEffect, useRef } from "react"
 import workStyles from "./work.module.scss"
 import gsap from "gsap"
 import { useStaticQuery, graphql } from "gatsby"
+import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
 function WorkContent() {
   let line1 = useRef(null)
   let para = useRef(null)
@@ -23,7 +26,10 @@ function WorkContent() {
 
   const data = useStaticQuery(graphql`
     query {
-      allContentfulPortfolioWork {
+      allContentfulPortfolioWork(
+        filter: {}
+        sort: { fields: projectNo, order: ASC }
+      ) {
         edges {
           node {
             projectNo
@@ -42,7 +48,13 @@ function WorkContent() {
       }
     }
   `)
-
+  let settings = {
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  }
   return (
     <div className={workStyles.workBody}>
       <h1 style={{ marginTop: "20rem" }}>
@@ -53,44 +65,42 @@ function WorkContent() {
         </div>
       </h1>
       <p ref={el => (para = el)} className={workStyles.about_para}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        These are some of my favorite projects.
       </p>
-      <div className={workStyles.grid}>
+
+      <Slider {...settings}>
+        {/* <div id="glider"> */}
         {data.allContentfulPortfolioWork.edges.map(({ node }) => {
           return (
-            <div className={workStyles.card}>
-              <h2 className={workStyles.num}>{`0${node.projectNo}`}</h2>
-              <div className={workStyles.card__inner}>
-                <div className={workStyles.inner__thumbnail}>
-                  <img src={node.thumbnail.file.url} />
-                </div>
-                <div className={workStyles.inner__desc}>
-                  <div className={workStyles.inner__desc__left}>
-                    <h2 className={workStyles.projectTitle}>
-                      {node.projectTitle}
-                    </h2>
-                    <p>{node.projectType}</p>
+            <div className={workStyles.cont}>
+              <div className={workStyles.card}>
+                <h2 className={workStyles.num}>{`0${node.projectNo}`}</h2>
+                <div className={workStyles.card__inner}>
+                  <div className={workStyles.inner__thumbnail}>
+                    <img src={node.thumbnail.file.url} />
                   </div>
-                  <div className={workStyles.inner__desc__right}>
-                    <p>{node.projectDesc}</p>
-                    <div className={workStyles.buttons}>
-                      {" "}
-                      <button>
-                        <a href={node.githubLink} target="_blank">
-                          See Code
-                        </a>
-                      </button>
-                      <button>
-                        <a href={node.liveLink} target="_blank">
-                          Live Site
-                        </a>
-                      </button>
+                  <div className={workStyles.inner__desc}>
+                    <div className={workStyles.inner__desc__left}>
+                      <h2 className={workStyles.projectTitle}>
+                        {node.projectTitle}
+                      </h2>
+                      <p>{node.projectType}</p>
+                    </div>
+                    <div className={workStyles.inner__desc__right}>
+                      <p className={workStyles.summary}>{node.projectDesc}</p>
+                      <div className={workStyles.buttons}>
+                        {" "}
+                        <button className={workStyles.projButton}>
+                          <a href={node.githubLink} target="_blank">
+                            See Code
+                          </a>
+                        </button>
+                        <button className={workStyles.projButton}>
+                          <a href={node.liveLink} target="_blank">
+                            Live Site
+                          </a>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -98,7 +108,8 @@ function WorkContent() {
             </div>
           )
         })}
-      </div>
+        {/* </div> */}
+      </Slider>
     </div>
   )
 }

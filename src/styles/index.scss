@@ -21,7 +21,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.slick-prev {
+  background: none;
+  padding: 1rem;
+  border: 2px solid black;
+  position: absolute;
+  left: -10rem;
+  top: 50%;
+  font-size: 1.8rem;
+  transform: translateY(-50%);
+}
+.slick-next {
+  background: none;
+  padding: 1rem;
+  border: 2px solid black;
+  position: absolute;
+  font-size: 1.8rem;
+  right: -10rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
 @font-face {
   font-family: "monument";
   src: url(../fonts/monument.otf);
