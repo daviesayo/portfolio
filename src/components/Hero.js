@@ -88,21 +88,36 @@ function Hero() {
         </div>
       </div>
       <div>
-        <div className={heroStyles.sideWrap}>
-          <div className={heroStyles.side}>
-            {" "}
-            <h1>
-              <span style={{ fontSize: "16px" }}>While you're here</span>
-              <br />
-              <a href="https://www.madebym1ke.com" target="_blank">
-                Visit My Art <br />
-                Portfolio.
-              </a>
-            </h1>
+        <div className="">
+          <p
+            // style={{ color: "red", fontSize: "2rem" }}
+            className={heroStyles.textReveal}
+          >
+            {/* <i class="fas fa-palette"></i> */}
+            <span className={heroStyles.arrow}>
+              <i class="fas fa-long-arrow-alt-right"></i>
+            </span>{" "}
+            PSST! Hover Here!
+          </p>
+
+          <div className={heroStyles.sideWrap}>
+            <div className={heroStyles.side}>
+              {" "}
+              <h1>
+                <span style={{ fontSize: "16px", lineHeight: ".5" }}>
+                  Oh hey there 👋 While you're here...
+                </span>
+                <br />
+                <a href="https://www.madebym1ke.com" target="_blank">
+                  Visit My Art <br />
+                  Portfolio.
+                </a>
+              </h1>
+            </div>
+            <img src={nameSpinner2} className={heroStyles.amper} />
+            {/* <h1 className={heroStyles.amper}>&</h1> */}
           </div>
         </div>
-        <img src={nameSpinner2} className={heroStyles.amper} />
-        {/* <h1 className={heroStyles.amper}>&</h1> */}
       </div>
     </div>
   )
