@@ -55,10 +55,10 @@ function AboutContent() {
         ></Typical>
       </p>
       <p ref={el => (para = el)} className={aboutStyles.about_para}>
-        I have a passion for web design and creating asthetically pleasing,
-        interactive and responsive layouts. I recently graduated with a first
-        class degree in Computer Science and am looking for an opportunity to
-        work with a Javascript framework in a team with a focus on technical
+        I have a passion for web development and strive to create impactful
+        experiences that positivley stimulate users. I recently graduated with a
+        first class degree in Computer Science and am looking for an opportunity
+        to work with a Javascript framework in a team with a focus on technical
         development and growth.
       </p>
       <div className={aboutStyles.gridContainer}>

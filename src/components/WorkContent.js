@@ -110,7 +110,7 @@ function WorkContent() {
                           className={workStyles.projButton}
                           target="_blank"
                         >
-                          See Code
+                          View Code
                         </a>
                         <a
                           href={node.liveLink}

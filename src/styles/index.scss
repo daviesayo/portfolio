@@ -18,7 +18,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-image: url(../icons/bg.png);
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
 }
 .slick-prev {
@@ -58,16 +60,21 @@ h1 {
   font-size: 14.4rem;
   // -webkit-backface-visibility: hidden;
 }
+h2 {
+  font-family: "monument";
+
+  // -webkit-backface-visibility: hidden;
+}
 
 body #magicPointer {
   z-index: 11 !important;
   background: red;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   height: 10px;
   width: 10px;
 }
 body #magicMouseCursor {
   border: 2px solid red;
   z-index: 11 !important;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
 }

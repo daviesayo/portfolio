@@ -93,11 +93,10 @@ function Hero() {
             // style={{ color: "red", fontSize: "2rem" }}
             className={heroStyles.textReveal}
           >
-            {/* <i class="fas fa-palette"></i> */}
             <span className={heroStyles.arrow}>
               <i class="fas fa-long-arrow-alt-right"></i>
             </span>{" "}
-            PSST! Hover Here!
+            PSST! Hover Here! <i class="fas fa-palette"></i>
           </p>
 
           <div className={heroStyles.sideWrap}>

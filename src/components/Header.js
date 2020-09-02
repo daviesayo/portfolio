@@ -19,7 +19,7 @@ function Header() {
         </Link>
         <nav>
           <ul className={headerStyles.nav}>
-            <li className={headerStyles.li}>
+            {/* <li className={headerStyles.li}>
               <Link
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
                 activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
@@ -27,7 +27,7 @@ function Header() {
               >
                 Home
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
