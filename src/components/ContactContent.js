@@ -41,6 +41,11 @@ function ContactContent() {
       y: -100,
     })
   }, [line1, line2, socials, sub_line1, sub_line2, form])
+
+  const handleSubmit = e => {
+    e.preventDefault()
+  }
+
   return (
     <div
       style={{
@@ -140,6 +145,7 @@ function ContactContent() {
               type="text"
               name="name"
               placeholder="Enter Name"
+              required
             ></input>
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -149,6 +155,7 @@ function ContactContent() {
               type="email"
               name="email"
               placeholder="Enter email"
+              required
             ></input>
           </div>
         </div>
@@ -161,9 +168,14 @@ function ContactContent() {
             cols="50"
             placeholder="Enter your message"
             style={{ height: "250px" }}
+            required
           ></textarea>
         </div>
-        <input className={contactStyles.button} type="submit"></input>
+        <input
+          className={contactStyles.button}
+          type="submit"
+          onSubmit={e => handleSubmit()}
+        ></input>
       </form>
     </div>
   )
