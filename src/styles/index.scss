@@ -63,6 +63,8 @@ body #magicPointer {
   z-index: 11 !important;
   background: red;
   mix-blend-mode: difference;
+  height: 10px;
+  width: 10px;
 }
 body #magicMouseCursor {
   border: 2px solid red;

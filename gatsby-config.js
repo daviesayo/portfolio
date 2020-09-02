@@ -12,10 +12,11 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: `cdn.contentful.com`,
       },
     },
     "gatsby-plugin-react-helmet",

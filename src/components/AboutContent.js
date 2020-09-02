@@ -165,9 +165,15 @@ function AboutContent() {
         experience and interactions to the next level.
       </p>
       <p className={aboutStyles.about_para2}>
+        When im not busy coding away, I enjoy gaming 🎮, learning to play the
+        guitar 🎸, reading blogs 📖, binge-watching Netflix 📺, creating art 🎨
+        and eating good food 🍲.
+      </p>
+      <p className={aboutStyles.about_para2}>
         If you'd like to learn more about what makes me tick <br />
-        <Link to="/contact" stylr={{ color: "red" }}>
-          feel free to get in touch <i class="fas fa-long-arrow-alt-right"></i>
+        feel free to{" "}
+        <Link to="/contact" style={{ color: "red" }}>
+          get in touch.
         </Link>
       </p>
     </div>
