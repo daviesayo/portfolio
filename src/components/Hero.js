@@ -1,13 +1,9 @@
 import React, { useEffect, useRef } from "react"
 import heroStyles from "./hero.module.scss"
 import arrow from "../icons/arrow.png"
-import arrow2 from "../icons/arrow2.png"
-// import nameSpinner from "../icons/name-spinner.png"
 import nameSpinner1 from "../icons/name-spinner1.png"
-import nameSpinner2 from "../icons/name-spinner2.png"
 import Typical from "react-typical"
 import { gsap } from "gsap"
-// import $ from "jquery"
 
 function Hero() {
   let line1 = useRef(null)
@@ -46,7 +42,11 @@ function Hero() {
   return (
     <>
       <div className={heroStyles.preloadBg}>
-        <img src={nameSpinner1} className={heroStyles.preloader} />
+        <img
+          src={nameSpinner1}
+          className={heroStyles.preloader}
+          alt="preloader"
+        />
         <div className={heroStyles.blinds}>
           <div ref={el => (blind1 = el)} className={heroStyles.blind}></div>
           <div ref={el => (blind2 = el)} className={heroStyles.blind}></div>
@@ -54,18 +54,6 @@ function Hero() {
         </div>
       </div>
       <div className={heroStyles.container}>
-        {/* <h1 className={heroStyles.intro}>
-        Hello
-        <span className={heroStyles.intro} style={{ color: "red" }}>
-          .
-        </span>
-        <br />
-        I'm
-        <br />
-        <span className={heroStyles.intro} style={{ color: "red" }}>
-          Michael
-        </span>
-      </h1> */}{" "}
         <div className={heroStyles.inner}>
           <h1>
             <div className={heroStyles.line_wrap}>
@@ -90,7 +78,7 @@ function Hero() {
           </h1>
           <div className={heroStyles.desc_wrap}>
             <div ref={el => (desc = el)} className={heroStyles.desc}>
-              <img src={arrow} height="130px" width="130px" />
+              <img src={arrow} height="130px" width="130px" alt="arrow" />
               <p className={heroStyles.heroPara}>
                 I'm a <br />
                 <Typical
@@ -131,7 +119,11 @@ function Hero() {
                     Oh hey there, While you're here...
                   </span>
                   <br />
-                  <a href="https://www.madebym1ke.com" target="_blank">
+                  <a
+                    href="https://www.madebym1ke.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     Visit My Art <br />
                     Portfolio.
                   </a>

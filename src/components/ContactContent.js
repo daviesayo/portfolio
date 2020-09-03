@@ -75,7 +75,11 @@ function ContactContent() {
             Where to find me
           </p>
           <ul className={contactStyles.social_links}>
-            <a href="mailto:makintomo04@hotmail.co.uk" target="_blank">
+            <a
+              href="mailto:makintomo04@hotmail.co.uk"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               <li>
                 <i class="fas fa-envelope"></i> Makintomo04@hotmail.co.uk
@@ -84,17 +88,26 @@ function ContactContent() {
             <a
               href="https://www.linkedin.com/in/michael-akintomo/"
               target="_blank"
+              rel="noreferrer"
             >
               <li>
                 <i class="fab fa-linkedin"></i> Michael-Akintomo
               </li>
             </a>
-            <a href="https://github.com/Makintomo04" target="_blank">
+            <a
+              href="https://github.com/Makintomo04"
+              target="_blank"
+              rel="noreferrer"
+            >
               <li>
                 <i class="fab fa-github"></i> Makintomo04
               </li>
             </a>
-            <a href="https://twitter.com/MadeByM1KE" target="_blank">
+            <a
+              href="https://twitter.com/MadeByM1KE"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               <li>
                 <i class="fab fa-twitter"></i> MadeByM1KE
@@ -143,6 +156,7 @@ function ContactContent() {
             <input
               className={contactStyles.inputs}
               type="text"
+              id="name"
               name="name"
               placeholder="Enter Name"
               required
@@ -153,6 +167,7 @@ function ContactContent() {
             <input
               className={contactStyles.inputs}
               type="email"
+              id="email"
               name="email"
               placeholder="Enter email"
               required
@@ -160,7 +175,7 @@ function ContactContent() {
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <label>Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"

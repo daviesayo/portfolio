@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import "../breakpoints/breakpoints";
 @font-face {
   font-family: "bask";
   src: url(../fonts/bask.ttf);
@@ -229,6 +230,7 @@
     text-align: center;
     color: white;
     transition: all 0.5s ease-in-out;
+
     a {
       color: white;
     }

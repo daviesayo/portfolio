@@ -9,6 +9,7 @@ module.exports = {
     title: "Michael Akintomo",
     description: "Hi I'm Michael and I'm a frontend developer.",
     author: "Michael Akintomo",
+    lang: "en",
   },
 
   /* Your site config here */

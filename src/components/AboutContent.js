@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react"
-// import Layout from "../layouts/index"
 import htmlIcon from "../icons/html_icon.png"
 import cssIcon from "../icons/css_icon.png"
 import jsIcon from "../icons/js_icon.png"
@@ -19,7 +18,6 @@ import gsapIcon from "../icons/gsap_icon.png"
 import cmsIcon from "../icons/contentful_icon.png"
 import Typical from "react-typical"
 import aboutStyles from "./about.module.scss"
-import nameSpinner2 from "../icons/name-spinner2.png"
 import { Link } from "gatsby"
 import gsap from "gsap"
 function AboutContent() {
@@ -170,9 +168,31 @@ function AboutContent() {
         experience and interactions to the next level.
       </p>
       <p className={aboutStyles.about_para2}>
-        When im not busy coding away, I enjoy gaming 🎮, learning to play the
-        guitar 🎸, reading blogs 📖, binge-watching Netflix 📺, creating art 🎨
-        and eating good food 🍲.
+        When im not busy coding away, I enjoy gaming{" "}
+        <span role="img" aria-label="game">
+          🎮
+        </span>
+        , learning to play the guitar{" "}
+        <span role="img" aria-label="guitar">
+          🎸
+        </span>
+        , reading blogs{" "}
+        <span role="img" aria-label="book">
+          📖
+        </span>
+        , binge-watching Netflix{" "}
+        <span role="img" aria-label="tv">
+          📺
+        </span>
+        , creating art{" "}
+        <span role="img" aria-label="paint palette">
+          🎨
+        </span>
+        and eating good food{" "}
+        <span role="img" aria-label="food">
+          🍲
+        </span>
+        .
       </p>
       <p className={aboutStyles.about_para2}>
         If you'd like to learn more about what makes me tick <br />

@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from "react"
-// import Layout from "../layouts/index"
 import workStyles from "./work.module.scss"
 import gsap from "gsap"
 import { useStaticQuery, graphql } from "gatsby"
-// import "slick-carousel/slick/slick.css"
-// import "slick-carousel/slick/slick-theme.css"
-// import Slider from "react-slick"
+
 function WorkContent() {
   let line1 = useRef(null)
   let para = useRef(null)
@@ -55,13 +52,7 @@ function WorkContent() {
       }
     }
   `)
-  // let settings = {
-  //   // dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 2,
-  // }
+
   return (
     <div className={workStyles.workBody}>
       <h1 style={{ marginTop: "20rem" }}>
@@ -78,6 +69,7 @@ function WorkContent() {
           style={{ color: "red" }}
           href="https://github.com/Makintomo04"
           target="_blank"
+          rel="noreferrer"
         >
           you can take a look at my github profile directly.
         </a>
@@ -90,7 +82,7 @@ function WorkContent() {
                 <h2 className={workStyles.num}>{`0${node.projectNo}`}</h2>
                 <div className={workStyles.card__inner}>
                   <div className={workStyles.inner__thumbnail}>
-                    <a href={node.liveLink} target="_blank">
+                    <a href={node.liveLink} target="_blank" rel="noreferrer">
                       <img
                         src={node.thumbnail.file.url}
                         alt={node.projectTitle}
@@ -112,6 +104,7 @@ function WorkContent() {
                           href={node.githubLink}
                           className={workStyles.projButton}
                           target="_blank"
+                          rel="noreferrer"
                         >
                           View Code
                         </a>
@@ -119,6 +112,7 @@ function WorkContent() {
                           href={node.liveLink}
                           className={workStyles.projButton}
                           target="_blank"
+                          rel="noreferrer"
                         >
                           Live Site
                         </a>

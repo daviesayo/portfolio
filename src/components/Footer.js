@@ -17,7 +17,12 @@ const Footer = () => {
     <footer className={footerStyles.footer}>
       <p>
         Created by {data.site.siteMetadata.author}, © 2020{" "}
-        <img className={footerStyles.flower} src={flowerImg} height="16px" />
+        <img
+          className={footerStyles.flower}
+          src={flowerImg}
+          alt="spinner"
+          height="16px"
+        />
       </p>
     </footer>
     // {/* </div> */}

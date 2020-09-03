@@ -15,9 +15,8 @@ const Head = props => {
   return (
     <Helmet
       title={
-        props.title
-          ? `${props.title} | ${data.site.siteMetadata.author}`
-          : `${data.site.siteMetadata.author}`
+        props.title && `${props.title} | ${data.site.siteMetadata.author}`
+        // : `${data.site.siteMetadata.author}`
       }
     />
   )

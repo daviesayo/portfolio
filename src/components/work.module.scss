@@ -1,14 +1,39 @@
+@import "../breakpoints/breakpoints";
 .workBody {
   height: auto;
+  padding: 3rem;
+  @include media("<=smTablet") {
+    padding: 2rem;
+  }
 }
 .about_para {
   margin-top: 5rem;
   max-width: 50%;
   font-size: 1.6rem;
+  @include media("<=laptop") {
+    max-width: 100%;
+  }
 }
 .line_wrap {
   overflow: hidden;
   height: 170px;
+  @include media("<=laptop") {
+    height: 120px;
+  }
+  @include media("<=smTablet2") {
+    height: 190px;
+  }
+  @include media("<=lgPhone") {
+    height: 150px;
+  }
+}
+.line1 {
+  @include media("<=laptop") {
+    font-size: 8.8rem;
+  }
+  @include media("<=lgPhone") {
+    font-size: 7rem;
+  }
 }
 .gridContainer {
   margin-top: 5rem;
@@ -17,7 +42,15 @@
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-template-columns: repeat(2, 1fr);
+  // grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-gap: 5rem;
+  // @include media("<=desktop") {
+  //   width: fit-content;
+  // }
+  @include media("<=smTablet") {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 .cont {
   // margin: 5rem 5rem 5rem 0;
@@ -25,10 +58,12 @@
 
 .card {
   // z-index: -1;
+
   margin-top: 8rem;
+  // margin: 8rem 3rem 3rem;
   height: auto;
   padding-bottom: 2rem;
-  width: 680px;
+  // width: 680px;
   position: relative;
   // margin: auto;
   // background-color: rgb(0, 0, 0);
@@ -37,6 +72,9 @@
   background: none;
   // margin: 10rem auto;
   transition: color 4s ease-in-out;
+  @include media("<=desktop") {
+    max-width: 100%;
+  }
   &:hover .num {
     color: red;
     // transform: translateY(-10px);
@@ -80,6 +118,10 @@
       color: red;
       display: flex;
       text-transform: uppercase;
+      @include media("<=smTablet") {
+        font-size: 1.6rem;
+        flex-direction: column;
+      }
       &__left {
         flex: 1;
       }
@@ -89,11 +131,17 @@
         line-height: 1;
         font-size: 4rem;
         margin-bottom: 1rem;
+        @include media("<=smTablet") {
+          font-size: 3rem;
+        }
       }
       &__right {
         flex: 1;
         color: black;
         text-align: right;
+        @include media("<=smTablet") {
+          text-align: left;
+        }
         .summary {
           letter-spacing: normal;
           text-transform: none;
@@ -103,6 +151,9 @@
     }
     .buttons {
       float: right;
+      @include media("<=smTablet") {
+        float: left;
+      }
       display: flex;
       .projButton {
         cursor: pointer;
@@ -119,6 +170,12 @@
         font-size: 1.6rem;
         letter-spacing: normal;
         transition: color 0.2s, background 0.2s, border 0.2s ease-in-out;
+        @include media("<=smTablet") {
+          font-size: 1.4rem;
+          text-align: center;
+          margin-left: 0;
+          margin-right: 2rem;
+        }
         &:hover {
           background: black;
           color: white;
