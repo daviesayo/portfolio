@@ -69,21 +69,22 @@ function AboutContent() {
         </p>
         <div className={aboutStyles.wrapper}>
           <div className={aboutStyles.skill}>
-            <img src={htmlIcon} height="64px" />
+            <img src={htmlIcon} height="64px" alt="HTML icon" />
             <p>HTML</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={cssIcon} height="64px" />
+            <img src={cssIcon} height="64px" alt="CSS icon" />
             <p>CSS</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={jsIcon} height="64px" />
+            <img src={jsIcon} height="64px" alt="Javascript icon" />
             <p>JAVASCRIPT</p>
           </div>
           <div className={aboutStyles.skill}>
             <img
               src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png"
               height="64px"
+              alt="SASS icon"
             />
             <p>SASS</p>
           </div>
@@ -91,6 +92,7 @@ function AboutContent() {
             <img
               src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"
               height="64px"
+              alt="Bootstrap icon"
             />
             <p>BOOTSTRAP</p>
           </div>
@@ -98,63 +100,64 @@ function AboutContent() {
             <img
               src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
               height="64px"
+              alt="React icon"
             />
             <p>REACT</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={gatsbyIcon} height="64px" />
+            <img src={gatsbyIcon} height="64px" alt="Gatsby icon" />
             <p>GATSBY</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={graphQLIcon} height="64px" />
+            <img src={graphQLIcon} height="64px" alt="GraphQL icon" />
             <p>GRAPHQL</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={gitIcon} height="64px" />
+            <img src={gitIcon} height="64px" alt="GIT icon" />
             <p>GIT</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={csharpIcon} height="64px" />
-            <p>C SHARP</p>
+            <img src={csharpIcon} height="64px" alt="C Sharp icon" />
+            <p>C#</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={javaIcon} height="64px" />
+            <img src={javaIcon} height="64px" alt="Java icon" />
             <p>JAVA</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={npmIcon} height="64px" />
+            <img src={npmIcon} height="64px" alt="NPM icon" />
             <p>NPM</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={unityIcon} height="64px" />
+            <img src={unityIcon} height="64px" alt="Unity3D icon" />
             <p>UNITY</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={psIcon} height="64px" />
+            <img src={psIcon} height="64px" alt="Photoshop icon" />
             <p>PHOTOSHOP</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={aiIcon} height="64px" />
+            <img src={aiIcon} height="64px" alt="Adobe Illustrator icon" />
             <p>ILLUSTRATOR</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={aeIcon} height="64px" />
+            <img src={aeIcon} height="64px" alt="After Effects icon" />
             <p>AFTER EFFECTS</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={figmaIcon} height="64px" />
+            <img src={figmaIcon} height="64px" alt="figma icon" />
             <p>FIGMA</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={c4dIcon} height="64px" />
+            <img src={c4dIcon} height="64px" alt="Cinema4D icon" />
             <p>CINEMA 4D</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={gsapIcon} height="64px" />
+            <img src={gsapIcon} height="64px" alt="GSAP icon" />
             <p>GSAP</p>
           </div>
           <div className={aboutStyles.skill}>
-            <img src={cmsIcon} height="64px" />
+            <img src={cmsIcon} height="64px" alt="Contentful icon" />
             <p>CONTENTFUL</p>
           </div>
         </div>

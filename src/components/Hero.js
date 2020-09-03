@@ -7,7 +7,7 @@ import nameSpinner1 from "../icons/name-spinner1.png"
 import nameSpinner2 from "../icons/name-spinner2.png"
 import Typical from "react-typical"
 import { gsap } from "gsap"
-import $ from "jquery"
+// import $ from "jquery"
 
 function Hero() {
   let line1 = useRef(null)

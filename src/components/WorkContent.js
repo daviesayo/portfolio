@@ -3,9 +3,9 @@ import React, { useEffect, useRef } from "react"
 import workStyles from "./work.module.scss"
 import gsap from "gsap"
 import { useStaticQuery, graphql } from "gatsby"
-import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick.css"
 // import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+// import Slider from "react-slick"
 function WorkContent() {
   let line1 = useRef(null)
   let para = useRef(null)
@@ -55,13 +55,13 @@ function WorkContent() {
       }
     }
   `)
-  let settings = {
-    // dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-  }
+  // let settings = {
+  //   // dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 2,
+  // }
   return (
     <div className={workStyles.workBody}>
       <h1 style={{ marginTop: "20rem" }}>
@@ -91,7 +91,10 @@ function WorkContent() {
                 <div className={workStyles.card__inner}>
                   <div className={workStyles.inner__thumbnail}>
                     <a href={node.liveLink} target="_blank">
-                      <img src={node.thumbnail.file.url} />
+                      <img
+                        src={node.thumbnail.file.url}
+                        alt={node.projectTitle}
+                      />
                     </a>
                   </div>
                   <div className={workStyles.inner__desc}>
