@@ -19,6 +19,7 @@ import gsapIcon from "../icons/gsap_icon.png"
 import cmsIcon from "../icons/contentful_icon.png"
 import Typical from "react-typical"
 import aboutStyles from "./about.module.scss"
+import nameSpinner2 from "../icons/name-spinner2.png"
 import { Link } from "gatsby"
 import gsap from "gsap"
 function AboutContent() {
@@ -61,6 +62,7 @@ function AboutContent() {
         to work with a Javascript framework in a team with a focus on technical
         development and growth.
       </p>
+
       <div className={aboutStyles.gridContainer}>
         <p className={aboutStyles.skillsTitle}>
           <strong>SKILLS / TECHNOLOGIES</strong>
@@ -157,7 +159,7 @@ function AboutContent() {
           </div>
         </div>
       </div>
-
+      {/* <img src={nameSpinner2} className={aboutStyles.amper} /> */}
       <p className={aboutStyles.about_para2}>
         Ultimately, as a developer I'd like to progress into creating mobile
         applications as well as web apps and also incorporate my other passion

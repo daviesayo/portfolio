@@ -6,6 +6,26 @@
   // text-transform: lowercase;
   // background-color: red;
 }
+.amper {
+  height: 20rem;
+  position: absolute;
+  bottom: -60%;
+  right: 30%;
+  // transform: translateY(-50%);
+  z-index: 1;
+  font-size: 80rem;
+  opacity: 1;
+  mix-blend-mode: overlay;
+  animation: spin 8s cubic-bezier(0.87, 0.32, 0, 0.39) infinite forwards;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .about_para2 {
   @extend .about_para;
   margin-bottom: 10rem;
