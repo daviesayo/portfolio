@@ -122,7 +122,8 @@ function ContactContent() {
         ref={el => (form = el)}
         name="contact-from"
         className={contactStyles.form}
-        netlify
+        method="POST"
+        data-netlify="true"
       >
         <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
           <div className={contactStyles.sub_line_wrap}>
