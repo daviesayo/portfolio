@@ -14,7 +14,7 @@
 .heading {
   margin-top: 20rem;
   @include media("<=smTablet") {
-    margin-top: 10rem;
+    margin-top: 12.5rem;
   }
 }
 .social_links {
@@ -94,16 +94,22 @@
 form {
   // margin-left: 2rem;
   margin-top: 20rem;
+  @include media("<=laptop") {
+    width: 100%;
+  }
   @include media("<=smTablet2") {
     width: 100%;
   }
   @include media("<=smTablet") {
-    margin-top: 10rem;
+    width: 100%;
   }
 }
 .formWrapper {
   width: 600px;
   margin-bottom: 1rem;
+  @include media("<=laptop") {
+    width: 100%;
+  }
   @include media("<=smTablet2") {
     max-width: 100%;
   }
