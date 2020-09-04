@@ -3,7 +3,7 @@ import heroStyles from "./hero.module.scss"
 import arrow from "../icons/arrow.png"
 import nameSpinner1 from "../icons/name-spinner1.png"
 import Typical from "react-typical"
-import { gsap } from "gsap"
+import { gsap, TweenMax } from "gsap"
 
 function Hero() {
   let line1 = useRef(null)
@@ -18,7 +18,7 @@ function Hero() {
     gsap.to([blind1, blind2, blind3], 0.4, {
       delay: 2.5,
       ease: "power3.out",
-      y: 1090,
+      y: 2000,
       stagger: {
         amount: 0.5,
       },
@@ -53,7 +53,7 @@ function Hero() {
           <div ref={el => (blind3 = el)} className={heroStyles.blind}></div>
         </div>
       </div>
-      <div className={heroStyles.heroBody} style={{ padding: "3rem" }}>
+      <div className={heroStyles.heroBody}>
         <div className={heroStyles.container}>
           <div className={heroStyles.inner}>
             <h1 style={{ marginTop: "20rem" }}>
@@ -79,7 +79,7 @@ function Hero() {
             </h1>
             <div className={heroStyles.desc_wrap}>
               <div ref={el => (desc = el)} className={heroStyles.desc}>
-                <img src={arrow} height="130px" width="130px" alt="arrow" />
+                <img classname={heroStyles.bigArrow} src={arrow} alt="arrow" />
                 <p className={heroStyles.heroPara}>
                   I'm a <br />
                   <Typical
@@ -101,11 +101,8 @@ function Hero() {
             </div>
           </div>
           <div>
-            <div className="">
-              <p
-                // style={{ color: "red", fontSize: "2rem" }}
-                className={heroStyles.textReveal}
-              >
+            <div>
+              <p className={heroStyles.textReveal}>
                 <span className={heroStyles.arrow}>
                   <i class="fas fa-long-arrow-alt-right"></i>
                 </span>{" "}
@@ -116,9 +113,7 @@ function Hero() {
                 <div className={heroStyles.side}>
                   {" "}
                   <h1>
-                    <span style={{ fontSize: "16px", lineHeight: ".5" }}>
-                      Oh hey there, While you're here...
-                    </span>
+                    <span>Oh hey there, While you're here...</span>
                     <br />
                     <a
                       href="https://www.madebym1ke.com"

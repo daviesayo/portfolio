@@ -12,6 +12,7 @@
 //     padding: 2rem;
 //   }
 // }
+
 .container {
   // padding: 3rem;
   max-width: 1440px;
@@ -20,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // position: absolute;
+  position: relative;
   height: auto;
   //   justify-content: center;
   //   background: red;
@@ -30,16 +31,31 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 3rem 3rem 0;
+  @include media("<=smTablet") {
+    padding: 2rem 2rem 0;
+  }
 }
 .desc {
-  margin-top: 5rem;
+  margin-top: 3rem;
   // transform: translateX(50%);
   display: flex;
+  img {
+    height: 130px;
+    width: 130px;
+    @include media("<=xlPhone") {
+      height: 100px;
+      width: 100px;
+    }
+  }
   .heroPara {
     align-self: flex-end;
     margin-left: 1rem;
     text-transform: uppercase;
     font-size: 2rem;
+    @include media("<=xlPhone") {
+      font-size: 1.6rem;
+    }
   }
 }
 .desc_wrap {
@@ -100,11 +116,12 @@
   text-align: center;
 }
 .blinds {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  // display: none; //
 }
 .blind {
   height: auto;
@@ -134,6 +151,8 @@
   color: red;
   font-weight: bold;
   font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 3rem;
   // height: 40px;
   // width: 50px;
   line-height: 1;
@@ -156,6 +175,9 @@
     i {
       transform: translateX(-5px);
     }
+  }
+  @include media("<=tablet") {
+    display: none;
   }
   // animation: shake 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite
   // alternate-reverse;
@@ -188,7 +210,19 @@
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
+  position: absolute;
+  max-width: 100%;
+  right: 0;
+  top: 160px;
+  transform: translateY(60px);
+  @include media("<=smDesktop") {
+    transform: translateY(0px);
+  }
+  @include media("<=tablet") {
+    display: none;
+  }
   transition: all 0.3s ease-in-out;
+
   // transform: translateX(720px);
   // background: green;
   &:hover {
@@ -210,12 +244,27 @@
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
+  h1 {
+    span {
+      font-size: 1.6rem;
+      line-height: 0.5;
+      @include media("<=ham") {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @include media("<=smDesktop") {
+    width: 400px;
+    height: 400px;
+  }
+
   // left: 58%;
   // bottom: 20%;
   // border-radius: 10%;
   padding: 5rem;
+  // transform: translateY(50%);
   // transform: rotateY(180deg);
   background-position: center;
   background: linear-gradient(
@@ -258,4 +307,42 @@
 .line_wrap {
   overflow: hidden;
   height: 144px;
+  @include media("<=laptop") {
+    height: 130px;
+  }
+  @include media("<=tablet") {
+    height: 110px;
+  }
+  @include media("<=smTablet") {
+    height: 90px;
+  }
+  @include media("<=xlPhone") {
+    height: 72px;
+  }
+  @include media("<=lgPhone") {
+    height: 58px;
+  }
+  @include media("<=phone") {
+    height: 45px;
+  }
+}
+.line {
+  @include media("<=laptop") {
+    font-size: 13rem;
+  }
+  @include media("<=tablet") {
+    font-size: 11rem;
+  }
+  @include media("<=smTablet") {
+    font-size: 9rem;
+  }
+  @include media("<=xlPhone") {
+    font-size: 7.2rem;
+  }
+  @include media("<=lgPhone") {
+    font-size: 5.8rem;
+  }
+  @include media("<=phone") {
+    font-size: 4.5rem;
+  }
 }

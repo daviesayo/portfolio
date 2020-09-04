@@ -103,6 +103,9 @@ form {
   @include media("<=smTablet") {
     width: 100%;
   }
+  @include media("<=xlPhone") {
+    margin-top: 10rem;
+  }
 }
 .formWrapper {
   width: 600px;
