@@ -122,22 +122,22 @@ function AboutContent() {
             <img src={javaIcon} height="64px" alt="Java icon" />
             <p>JAVA</p>
           </div>
-          {/* <div className={aboutStyles.skill}>
+          <div className={aboutStyles.skill}>
             <img src={npmIcon} height="64px" alt="NPM icon" />
             <p>NPM</p>
-          </div> */}
-          {/* <div className={aboutStyles.skill}>
+          </div>
+          <div className={aboutStyles.skill}>
             <img src={unityIcon} height="64px" alt="Unity3D icon" />
             <p>UNITY</p>
-          </div> */}
+          </div>
           <div className={aboutStyles.skill}>
             <img src={psIcon} height="64px" alt="Photoshop icon" />
             <p>PHOTOSHOP</p>
           </div>
-          {/* <div className={aboutStyles.skill}>
+          <div className={aboutStyles.skill}>
             <img src={aiIcon} height="64px" alt="Adobe Illustrator icon" />
             <p>ILLUSTRATOR</p>
-          </div> */}
+          </div>
           {/* <div className={aboutStyles.skill}>
             <img src={aeIcon} height="64px" alt="After Effects icon" />
             <p>AFTER EFFECTS</p>
@@ -150,10 +150,10 @@ function AboutContent() {
             <img src={c4dIcon} height="64px" alt="Cinema4D icon" />
             <p>CINEMA 4D</p>
           </div> */}
-          {/* <div className={aboutStyles.skill}>
+          <div className={aboutStyles.skill}>
             <img src={gsapIcon} height="64px" alt="GSAP icon" />
             <p>GSAP</p>
-          </div> */}
+          </div>
           <div className={aboutStyles.skill}>
             <img src={cmsIcon} height="64px" alt="Contentful icon" />
             <p>CONTENTFUL</p>

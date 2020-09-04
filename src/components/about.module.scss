@@ -83,7 +83,6 @@
   display: grid;
   width: 100%;
   margin: 0 auto;
-  // grid-template-columns: repeat(5, 250px);
   grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
   @include media("<=laptop") {
     grid-template-columns: repeat(auto-fit, minmax(70px, 0.5fr));
@@ -92,7 +91,6 @@
     height: 100px;
     display: flex;
     align-items: center;
-    // background-color: rgba(191, 191, 191, 0.449);
     border: 2px solid rgba(0, 0, 0, 0.313);
     padding: 1rem 1.5rem;
     margin: 1rem;
@@ -101,20 +99,6 @@
       padding: 0;
       margin: 0;
     }
-    // color: white;
-    // background: red;
-    // &:nth-child(1) {
-    //   margin-left: 0;
-    // }
-    // &:nth-child(6) {
-    //   margin-left: 0;
-    // }
-    // &:nth-child(11) {
-    //   margin-left: 0;
-    // }
-    // &:nth-child(16) {
-    //   margin-left: 0;
-    // }
 
     img {
       transition: all 0.3s ease-in-out;
@@ -126,7 +110,6 @@
       }
     }
     p {
-      // color: red;
       font-weight: 600;
       margin-left: 1.2rem;
       font-size: 1.6rem;
