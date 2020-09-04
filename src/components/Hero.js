@@ -3,7 +3,7 @@ import heroStyles from "./hero.module.scss"
 import arrow from "../icons/arrow.png"
 import nameSpinner1 from "../icons/name-spinner1.png"
 import Typical from "react-typical"
-import { gsap, TweenMax } from "gsap"
+import { gsap } from "gsap"
 
 function Hero() {
   let line1 = useRef(null)
