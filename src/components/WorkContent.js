@@ -55,7 +55,7 @@ function WorkContent() {
 
   return (
     <div className={workStyles.workBody}>
-      <h1 style={{ marginTop: "20rem" }}>
+      <h1 className={workStyles.heading}>
         <div className={workStyles.line_wrap}>
           <div ref={el => (line1 = el)} className={workStyles.line1}>
             My Work<span style={{ color: "red" }}>.</span>
