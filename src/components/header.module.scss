@@ -59,6 +59,56 @@
     display: none;
   }
 }
+// nav {
+//   position: absolute;
+//   width: 50vw;
+//   top: 10vh;
+//   bottom: 0;
+//   left: 50%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   background: white;
+// }
+.navBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  bottom: 0;
+  z-index: 8;
+  background: black;
+  // transform: translateX(100%);
+  // box-shadow: 0px 4px 7px -2px rgba(0, 0, 0, 0.56);
+}
+.openNav {
+  // background: green;
+  // top: 30%;
+  right: 50%;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  // justify-content: center;
+  height: auto;
+  // width: 100vw;
+  margin: auto;
+  // background: red;
+  li {
+    margin: 2rem auto;
+    list-style: none;
+    a {
+      font-size: 2.4rem;
+    }
+  }
+  z-index: 9;
+  position: absolute;
+}
 .ham {
   display: none;
   font-size: 2.4rem;
@@ -70,6 +120,9 @@
 .navItem {
   text-decoration: none;
   color: black;
+  @include media("<=ham") {
+    color: white;
+  }
 }
 .activeNavItem {
   color: red;

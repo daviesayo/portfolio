@@ -1,15 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import headerStyles from "./header.module.scss"
 import layoutStyles from "../layouts/layout.module.scss"
 import { Link } from "gatsby"
 import "../styles/index.scss"
 import Logo from "../icons/pesonal_dev_logo2.png"
 function Header() {
-  const handleClick = () => {}
+  const [openNav, setOpenNav] = useState(false)
+  const handleClick = () => {
+    setOpenNav(!openNav)
+  }
+  const handleLinkClick = () => {
+    setOpenNav(false)
+  }
   return (
     <div className={headerStyles.header_wrap}>
       <header className={headerStyles.header}>
-        <Link to="/" className={headerStyles.logo} aria-label="Home">
+        <Link
+          to="/"
+          className={headerStyles.logo}
+          aria-label="Home"
+          onClick={handleLinkClick}
+        >
           <img className={headerStyles.logo} src={Logo} alt="logo" />
           {/* <h2
             className="magic-hover magic-hover__square"
@@ -19,8 +30,12 @@ function Header() {
             AKINTOMO
           </h2> */}
         </Link>
-        <nav>
-          <ul className={headerStyles.nav}>
+        <nav className={`${openNav == true && headerStyles.navBg}`}>
+          <ul
+            className={`${
+              openNav == true ? headerStyles.openNav : headerStyles.nav
+            }`}
+          >
             {/* <li className={headerStyles.li}>
               <Link
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
@@ -35,6 +50,7 @@ function Header() {
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
                 activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
                 to="/about"
+                onClick={handleLinkClick}
               >
                 About
               </Link>
@@ -44,6 +60,7 @@ function Header() {
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
                 activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
                 to="/work"
+                onClick={handleLinkClick}
               >
                 Work
               </Link>
@@ -53,6 +70,7 @@ function Header() {
                 className={`magic-hover magic-hover__square ${headerStyles.navItem}`}
                 activeClassName={`magic-hover magic-hover__square ${headerStyles.activeNavItem}`}
                 to="/contact"
+                onClick={handleLinkClick}
               >
                 Contact
               </Link>
