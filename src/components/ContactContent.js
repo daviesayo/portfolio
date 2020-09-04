@@ -166,17 +166,6 @@ function ContactContent() {
               required
             ></input>
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="email">Subject</label>
-            <input
-              className={contactStyles.inputs}
-              type="subject"
-              id="subject"
-              name="subject"
-              placeholder="Enter subject"
-              required
-            ></input>
-          </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <label htmlFor="message">Message</label>
