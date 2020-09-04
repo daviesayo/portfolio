@@ -53,84 +53,86 @@ function Hero() {
           <div ref={el => (blind3 = el)} className={heroStyles.blind}></div>
         </div>
       </div>
-      <div className={heroStyles.container}>
-        <div className={heroStyles.inner}>
-          <h1>
-            <div className={heroStyles.line_wrap}>
-              <div ref={el => (line1 = el)} className={heroStyles.line}>
-                Hello<span style={{ color: "red" }}>.</span>
+      <div className={heroStyles.heroBody} style={{ padding: "3rem" }}>
+        <div className={heroStyles.container}>
+          <div className={heroStyles.inner}>
+            <h1 style={{ marginTop: "20rem" }}>
+              <div className={heroStyles.line_wrap}>
+                <div ref={el => (line1 = el)} className={heroStyles.line}>
+                  Hello<span style={{ color: "red" }}>.</span>
+                </div>
               </div>
-            </div>
-            <div className={heroStyles.line_wrap}>
-              <div ref={el => (line2 = el)} className={heroStyles.line}>
-                I'm
+              <div className={heroStyles.line_wrap}>
+                <div ref={el => (line2 = el)} className={heroStyles.line}>
+                  I'm
+                </div>
               </div>
-            </div>
-            <div className={heroStyles.line_wrap}>
-              <div
-                ref={el => (line3 = el)}
-                style={{ color: "red" }}
-                className={heroStyles.line}
-              >
-                Michael
+              <div className={heroStyles.line_wrap}>
+                <div
+                  ref={el => (line3 = el)}
+                  style={{ color: "red" }}
+                  className={heroStyles.line}
+                >
+                  Michael
+                </div>
               </div>
-            </div>
-          </h1>
-          <div className={heroStyles.desc_wrap}>
-            <div ref={el => (desc = el)} className={heroStyles.desc}>
-              <img src={arrow} height="130px" width="130px" alt="arrow" />
-              <p className={heroStyles.heroPara}>
-                I'm a <br />
-                <Typical
-                  loop={Infinity}
-                  wrapper="b"
-                  steps={[
-                    "frontend developer.",
-                    1000,
-                    "computer science graduate.",
-                    1000,
-                    "3D artist",
-                    1000,
-                    "graphic Designer.",
-                    1000,
-                  ]}
-                ></Typical>
-              </p>
+            </h1>
+            <div className={heroStyles.desc_wrap}>
+              <div ref={el => (desc = el)} className={heroStyles.desc}>
+                <img src={arrow} height="130px" width="130px" alt="arrow" />
+                <p className={heroStyles.heroPara}>
+                  I'm a <br />
+                  <Typical
+                    loop={Infinity}
+                    wrapper="b"
+                    steps={[
+                      "frontend developer.",
+                      1000,
+                      "computer science graduate.",
+                      1000,
+                      "3D artist",
+                      1000,
+                      "graphic Designer.",
+                      1000,
+                    ]}
+                  ></Typical>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div className="">
-            <p
-              // style={{ color: "red", fontSize: "2rem" }}
-              className={heroStyles.textReveal}
-            >
-              <span className={heroStyles.arrow}>
-                <i class="fas fa-long-arrow-alt-right"></i>
-              </span>{" "}
-              PSST! Hover Here! <i class="fas fa-palette"></i>
-            </p>
+          <div>
+            <div className="">
+              <p
+                // style={{ color: "red", fontSize: "2rem" }}
+                className={heroStyles.textReveal}
+              >
+                <span className={heroStyles.arrow}>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </span>{" "}
+                PSST! Hover Here! <i class="fas fa-palette"></i>
+              </p>
 
-            <div className={heroStyles.sideWrap}>
-              <div className={heroStyles.side}>
-                {" "}
-                <h1>
-                  <span style={{ fontSize: "16px", lineHeight: ".5" }}>
-                    Oh hey there, While you're here...
-                  </span>
-                  <br />
-                  <a
-                    href="https://www.madebym1ke.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Visit My Art <br />
-                    Portfolio.
-                  </a>
-                </h1>
+              <div className={heroStyles.sideWrap}>
+                <div className={heroStyles.side}>
+                  {" "}
+                  <h1>
+                    <span style={{ fontSize: "16px", lineHeight: ".5" }}>
+                      Oh hey there, While you're here...
+                    </span>
+                    <br />
+                    <a
+                      href="https://www.madebym1ke.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Visit My Art <br />
+                      Portfolio.
+                    </a>
+                  </h1>
+                </div>
+                {/* <img src={nameSpinner2} className={heroStyles.amper} /> */}
+                {/* <h1 className={heroStyles.amper}>&</h1> */}
               </div>
-              {/* <img src={nameSpinner2} className={heroStyles.amper} /> */}
-              {/* <h1 className={heroStyles.amper}>&</h1> */}
             </div>
           </div>
         </div>

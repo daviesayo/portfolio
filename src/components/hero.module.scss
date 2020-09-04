@@ -4,20 +4,30 @@
   font-family: "bask";
   src: url(../fonts/bask.ttf);
 }
+// @import "../breakpoints/breakpoints";
+// .workBody {
+//   height: auto;
+//   padding: 3rem;
+//   @include media("<=smTablet") {
+//     padding: 2rem;
+//   }
+// }
 .container {
+  // padding: 3rem;
   max-width: 1440px;
   width: 100%;
   //   flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  height: 100vh;
+  // position: absolute;
+  height: auto;
   //   justify-content: center;
   //   background: red;
   margin: 0 auto;
 }
 .inner {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }

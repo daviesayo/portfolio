@@ -1,4 +1,11 @@
 @import "../breakpoints/breakpoints";
+.aboutBody {
+  height: auto;
+  padding: 3rem;
+  @include media("<=smTablet") {
+    padding: 2rem;
+  }
+}
 .about_para {
   margin-top: 5rem;
   max-width: 50%;
@@ -62,10 +69,7 @@
     font-size: 7rem;
   }
 }
-.aboutBody {
-  height: auto;
-  padding: 3rem;
-}
+
 .gridContainer {
   margin: 8rem 0;
   .skillsTitle {

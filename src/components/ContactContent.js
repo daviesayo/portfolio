@@ -48,6 +48,7 @@ function ContactContent() {
 
   return (
     <div
+      className={contactStyles.contactBody}
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -55,7 +56,7 @@ function ContactContent() {
       }}
     >
       <div className={contactStyles.contact_left}>
-        <h1 style={{ marginTop: "20rem" }}>
+        <h1 className={contactStyles.heading}>
           <div className={contactStyles.line_wrap}>
             <div ref={el => (line1 = el)} className={contactStyles.line1}>
               Get in
@@ -121,10 +122,9 @@ function ContactContent() {
         ref={el => (form = el)}
         name="contact-from"
         className={contactStyles.form}
-        style={{ marginTop: "20rem" }}
         netlify
       >
-        <h2 style={{ fontSize: "4rem", marginBottom: "4rem" }}>
+        <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
           <div className={contactStyles.sub_line_wrap}>
             <div
               ref={el => (sub_line1 = el)}
@@ -143,14 +143,7 @@ function ContactContent() {
             </div>
           </div>
         </h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "500px",
-            marginBottom: "2rem",
-          }}
-        >
+        <div className={contactStyles.formWrapper}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <label htmlFor="name">Name</label>
             <input
@@ -182,7 +175,7 @@ function ContactContent() {
             rows="4"
             cols="50"
             placeholder="Enter your message"
-            style={{ height: "250px" }}
+            style={{ height: "150px" }}
             required
           ></textarea>
         </div>
