@@ -58,9 +58,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
-.cont {
-  // margin: 5rem 5rem 5rem 0;
-}
 
 .card {
   // z-index: -1;
@@ -152,6 +149,9 @@
           letter-spacing: normal;
           text-transform: none;
           font-size: 1.4rem;
+          @include media("<=smTablet") {
+            margin-top: 1.6rem;
+          }
         }
       }
     }
