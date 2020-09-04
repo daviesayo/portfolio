@@ -1,4 +1,5 @@
 @import "../breakpoints/breakpoints";
+@import url(//db.onlinewebfonts.com/c/5a7f8e143dbda0b26952bc287ad05cc4?family=Monument+Extended+Light);
 * {
   margin: 0;
   padding: 0;
@@ -57,10 +58,10 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-@font-face {
-  font-family: "monument";
-  src: url(../fonts/monument.otf) format("opentype");
-}
+// @font-face {
+//   font-family: "monument";
+//   src: url(../fonts/monument.otf) format("opentype");
+// }
 .container {
   max-width: 1440px;
   width: 100%;
@@ -70,12 +71,12 @@ body {
 }
 
 h1 {
-  font-family: "monument";
+  font-family: Monument Extended Light;
   font-size: 14.4rem;
   // -webkit-backface-visibility: hidden;
 }
 h2 {
-  font-family: "monument";
+  font-family: Monument Extended Light;
 
   // -webkit-backface-visibility: hidden;
 }

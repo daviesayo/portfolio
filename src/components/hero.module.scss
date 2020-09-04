@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url(//db.onlinewebfonts.com/c/5a7f8e143dbda0b26952bc287ad05cc4?family=Monument+Extended+Light);
 @import "../breakpoints/breakpoints";
 // @font-face {
 //   font-family: "bask";
@@ -327,6 +328,7 @@
   }
 }
 .line {
+  font-family: monument Extended Light;
   @include media("<=laptop") {
     font-size: 13rem;
   }
