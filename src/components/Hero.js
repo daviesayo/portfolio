@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import heroStyles from "./hero.module.scss"
 import arrow from "../icons/arrow.png"
-import nameSpinner1 from "../icons/name-spinner1.png"
+import nameSpinner1 from "../icons/name-spinner1.webp"
 import Typical from "react-typical"
 import { gsap } from "gsap"
 
