@@ -1,7 +1,7 @@
 import React from "react"
 import Head from "../components/Head"
 import NotFoundContent from "../components/NotFoundContent"
-function notFound() {
+function NotFound() {
   return (
     <div>
       <Head title="404" />
@@ -10,4 +10,4 @@ function notFound() {
   )
 }
 
-export default notFound
+export default NotFound
