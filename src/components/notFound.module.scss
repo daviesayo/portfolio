@@ -1,0 +1,45 @@
+@import "../breakpoints/breakpoints";
+.nfBody {
+  height: auto;
+  padding: 3rem;
+  @include media("<=smTablet") {
+    padding: 2rem;
+  }
+}
+.heading {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  line-height: 1.4;
+  @include media("<=tablet") {
+    font-size: 11rem;
+  }
+  @include media("<=xlPhone") {
+    font-size: 9rem;
+  }
+  @include media("<=lgPhone") {
+    font-size: 7rem;
+  }
+  @include media("<=phone") {
+    font-size: 5.5rem;
+  }
+}
+
+.return {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: black;
+  text-transform: uppercase;
+  padding: 2rem;
+  border: 2px solid black;
+  transition: color 0.2s, background 0.2s, border 0.2s ease-in-out;
+  &:hover {
+    background: black;
+    color: white;
+  }
+  @include media("<=xlPhone") {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    display: block;
+    text-align: center;
+  }
+}
