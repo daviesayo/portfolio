@@ -48,22 +48,29 @@
   @include media("<=laptop") {
     height: 120px;
   }
-  @include media("<=smTablet2") {
+  @include media("<=smTablet") {
     height: 190px;
   }
+  @include media("<=smTablet2") {
+    height: 180px;
+  }
   @include media("<=lgPhone") {
-    height: 150px;
+    height: 160px;
   }
 }
 .heading {
-  margin-top: 20rem;
+  margin-top: 15rem;
   @include media("<=smTablet") {
-    margin-top: 12.5rem;
+    margin-top: 10rem;
   }
 }
 .line1 {
+  line-height: 1;
   @include media("<=laptop") {
     font-size: 8.8rem;
+  }
+  @include media("<=tablet") {
+    font-size: 8.4rem;
   }
   @include media("<=lgPhone") {
     font-size: 7rem;

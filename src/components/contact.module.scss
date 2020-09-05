@@ -12,9 +12,9 @@
   font-size: 1.8rem;
 }
 .heading {
-  margin-top: 20rem;
+  margin-top: 15rem;
   @include media("<=smTablet") {
-    margin-top: 12.5rem;
+    margin-top: 10rem;
   }
 }
 .social_links {
@@ -35,34 +35,22 @@
 
 .line_wrap {
   overflow: hidden;
-  height: 144px;
+  height: 160px;
   @include media("<=tablet") {
-    height: 120px;
+    height: 125px;
   }
-  @include media("<=tablet") {
+
+  @include media("<=smTablet") {
     height: 100px;
   }
   @include media("<=lgPhone") {
-    height: 70px;
+    height: 80px;
   }
   @include media("<=phone") {
     height: 60px;
   }
 }
-.line1 {
-  @include media("<=tablet") {
-    font-size: 11rem;
-  }
-  @include media("<=smTablet") {
-    font-size: 8.2rem;
-  }
-  @include media("<=lgPhone") {
-    font-size: 6.5rem;
-  }
-  @include media("<=phone") {
-    font-size: 5.5rem;
-  }
-}
+.line1,
 .line2 {
   @include media("<=tablet") {
     font-size: 11rem;
@@ -77,9 +65,10 @@
     font-size: 5.5rem;
   }
 }
+
 .sub_line_wrap {
   overflow: hidden;
-  height: 50px;
+  height: 55px;
   @include media("<=phone") {
     height: 40px;
   }

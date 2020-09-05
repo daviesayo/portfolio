@@ -15,22 +15,22 @@
   }
 }
 .heading {
-  margin-top: 20rem;
+  margin-top: 15rem;
   @include media("<=smTablet") {
-    margin-top: 12.5rem;
+    margin-top: 10rem;
   }
 }
 .line_wrap {
   overflow: hidden;
-  height: 170px;
+  height: 200px;
   @include media("<=laptop") {
     height: 120px;
   }
   @include media("<=smTablet2") {
-    height: 190px;
+    height: 230px;
   }
   @include media("<=lgPhone") {
-    height: 150px;
+    height: 190px;
   }
 }
 .line1 {
