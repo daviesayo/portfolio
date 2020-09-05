@@ -50,7 +50,10 @@ function AboutContent() {
         <Typical
           loop={1}
           wrapper="b"
-          steps={["I'm a Front-End Developer based in London, England.", 1000]}
+          steps={[
+            "I'm a 21 year old Front-End Developer based in London, England.",
+            1000,
+          ]}
         ></Typical>
       </p>
       <p ref={el => (para = el)} className={aboutStyles.about_para}>
