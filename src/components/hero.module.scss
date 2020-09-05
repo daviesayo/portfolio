@@ -2,6 +2,7 @@
 @import "../breakpoints/breakpoints";
 @font-face {
   font-family: "monument_extendedregular";
+  font-display: auto;
   src: url("../fonts/monument-webfont.woff2") format("woff2"),
     url("../fonts/monument-webfont.woff") format("woff");
   font-weight: normal;
