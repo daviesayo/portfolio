@@ -26,15 +26,15 @@ function Hero() {
   }, [blind1, blind2, blind3])
   useEffect(() => {
     gsap.from([line1, line2, line3], 0.8, {
-      delay: 3.3,
+      delay: 3,
       ease: "power3.out",
-      y: 144,
+      y: 170,
       stagger: {
         amount: 0.2,
       },
     })
     gsap.from([desc], 0.8, {
-      delay: 3.3,
+      delay: 3,
       ease: "power3.out",
       y: -180,
     })
