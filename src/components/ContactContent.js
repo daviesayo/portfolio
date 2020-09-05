@@ -154,7 +154,7 @@ function ContactContent() {
               type="text"
               id="name"
               name="name"
-              placeholder="Enter Name"
+              placeholder="Enter name"
               required
             ></input>
           </div>

@@ -81,7 +81,7 @@
 }
 
 .formContainer {
-  margin-top: 20rem;
+  margin-top: 15rem;
   @include media("<=laptop") {
     width: 100%;
     margin-top: 12.5rem;
@@ -115,6 +115,8 @@ label {
 .inputs {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   margin-bottom: 1.5rem;
   width: 100%;
   padding: 1.2rem 1rem;
@@ -128,14 +130,20 @@ label {
 #name {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 #email {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 textArea {
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   font-size: 1.6rem;
   padding: 1rem;
   border: 2px solid black;
@@ -156,6 +164,8 @@ textarea::placeholder {
   }
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   text-transform: uppercase;
   padding: 1rem 2rem;
   color: white;
