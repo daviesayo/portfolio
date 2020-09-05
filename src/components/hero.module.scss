@@ -19,7 +19,12 @@
 //     padding: 2rem;
 //   }
 // }
-
+.heading {
+  margin-top: 15rem;
+  @include media("<=smTablet") {
+    margin-top: 10rem;
+  }
+}
 .container {
   // padding: 3rem;
   max-width: 1440px;
@@ -53,6 +58,10 @@
     @include media("<=xlPhone") {
       height: 100px;
       width: 100px;
+    }
+    @include media("<=phone") {
+      height: 80px;
+      width: 80px;
     }
   }
   .heroPara {
@@ -313,24 +322,24 @@
 
 .line_wrap {
   overflow: hidden;
-  height: 144px;
+  height: 160px;
   @include media("<=laptop") {
-    height: 130px;
+    height: 150px;
   }
   @include media("<=tablet") {
-    height: 110px;
+    height: 140px;
   }
   @include media("<=smTablet") {
-    height: 90px;
+    height: 100px;
   }
   @include media("<=xlPhone") {
-    height: 72px;
+    height: 82px;
   }
   @include media("<=lgPhone") {
-    height: 58px;
+    height: 68px;
   }
   @include media("<=phone") {
-    height: 45px;
+    height: 55px;
   }
 }
 .line {

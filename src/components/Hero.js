@@ -56,7 +56,7 @@ function Hero() {
       <div className={heroStyles.heroBody}>
         <div className={heroStyles.container}>
           <div className={heroStyles.inner}>
-            <h1 style={{ marginTop: "20rem" }}>
+            <h1 className={heroStyles.heading}>
               <div className={heroStyles.line_wrap}>
                 <div ref={el => (line1 = el)} className={heroStyles.line}>
                   Hello<span style={{ color: "red" }}>.</span>
