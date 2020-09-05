@@ -2,7 +2,7 @@ import React from "react"
 import ContactContent from "../components/ContactContent"
 import Head from "../components/Head"
 import SEO from "../components/seo"
-
+import { graphql } from "gatsby"
 function contact({ data }) {
   return (
     <div>

@@ -2,7 +2,7 @@ import React from "react"
 import WorkContent from "../components/WorkContent"
 import Head from "../components/Head"
 import SEO from "../components/seo"
-
+import { graphql } from "gatsby"
 function work({ data }) {
   return (
     <div>
