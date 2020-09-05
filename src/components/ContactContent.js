@@ -118,7 +118,7 @@ function ContactContent() {
         </div>
       </div>
 
-      <form name="contact" method="POST" netlify>
+      <form name="contact-from" method="POST" netlify>
         <div ref={el => (form = el)} className={contactStyles.formContainer}>
           <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
             <div className={contactStyles.sub_line_wrap}>
