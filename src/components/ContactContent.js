@@ -118,73 +118,69 @@ function ContactContent() {
         </div>
       </div>
 
-      <form
-        ref={el => (form = el)}
-        name="contact"
-        className={contactStyles.form}
-        method="POST"
-        netlify
-      >
-        <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
-          <div className={contactStyles.sub_line_wrap}>
-            <div
-              ref={el => (sub_line1 = el)}
-              className={contactStyles.sub_line1}
-            >
-              Send me a
+      <form name="contact" method="POST" netlify>
+        <div ref={el => (form = el)} className={contactStyles.formContainer}>
+          <h2 style={{ fontSize: "4rem", marginBottom: "2rem" }}>
+            <div className={contactStyles.sub_line_wrap}>
+              <div
+                ref={el => (sub_line1 = el)}
+                className={contactStyles.sub_line1}
+              >
+                Send me a
+              </div>
+            </div>
+            <div className={contactStyles.sub_line_wrap}>
+              <div
+                ref={el => (sub_line2 = el)}
+                className={contactStyles.sub_line2}
+              >
+                message{" "}
+                <i style={{ color: "red" }} class="fab fa-telegram-plane"></i>
+              </div>
+            </div>
+          </h2>
+          <div className={contactStyles.formWrapper}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <label htmlFor="name">Name</label>
+              <input
+                className={contactStyles.inputs}
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Name"
+                required
+              ></input>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <label htmlFor="email">Email</label>
+              <input
+                className={contactStyles.inputs}
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              ></input>
             </div>
           </div>
-          <div className={contactStyles.sub_line_wrap}>
-            <div
-              ref={el => (sub_line2 = el)}
-              className={contactStyles.sub_line2}
-            >
-              message{" "}
-              <i style={{ color: "red" }} class="fab fa-telegram-plane"></i>
-            </div>
-          </div>
-        </h2>
-        <div className={contactStyles.formWrapper}>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="name">Name</label>
-            <input
-              className={contactStyles.inputs}
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter Name"
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="50"
+              placeholder="Enter your message"
+              style={{ height: "150px" }}
               required
-            ></input>
+            ></textarea>
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="email">Email</label>
-            <input
-              className={contactStyles.inputs}
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter email"
-              required
-            ></input>
-          </div>
+          <input
+            className={contactStyles.button}
+            type="submit"
+            onSubmit={e => handleSubmit()}
+          ></input>
         </div>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            cols="50"
-            placeholder="Enter your message"
-            style={{ height: "150px" }}
-            required
-          ></textarea>
-        </div>
-        <input
-          className={contactStyles.button}
-          type="submit"
-          onSubmit={e => handleSubmit()}
-        ></input>
       </form>
     </div>
   )

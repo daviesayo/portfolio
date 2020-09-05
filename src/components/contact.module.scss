@@ -12,9 +12,9 @@
   font-size: 1.8rem;
 }
 .heading {
-  margin-top: 15rem;
+  margin-top: 10rem;
   @include media("<=smTablet") {
-    margin-top: 10rem;
+    margin-top: 7.5rem;
   }
 }
 .social_links {
@@ -80,11 +80,11 @@
   }
 }
 
-form {
-  // margin-left: 2rem;
+.formContainer {
   margin-top: 20rem;
   @include media("<=laptop") {
     width: 100%;
+    margin-top: 12.5rem;
   }
   @include media("<=smTablet2") {
     width: 100%;

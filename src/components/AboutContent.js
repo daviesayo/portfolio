@@ -171,7 +171,7 @@ function AboutContent() {
         experience and interactions to the next level.
       </p>
       <p className={aboutStyles.about_para2}>
-        When im not busy coding away, I enjoy gaming{" "}
+        When I'm not busy coding away, I enjoy gaming{" "}
         <span role="img" aria-label="game">
           🎮
         </span>
@@ -189,7 +189,14 @@ function AboutContent() {
         </span>
         , creating art{" "}
         <span role="img" aria-label="paint palette">
-          🎨
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://www.madebym1ke.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            🎨
+          </a>
         </span>
         and eating good food{" "}
         <span role="img" aria-label="food">
