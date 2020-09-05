@@ -83,11 +83,13 @@
     // transform: translateY(-10px);
   }
   .num {
+    pointer-events: none;
     position: absolute;
     left: 10px;
     top: -60px;
     font-size: 10rem;
-    -webkit-text-stroke: 1px red;
+    -webkit-text-stroke: 2px red;
+    // outline: 2px solid red;
     color: transparent;
     transition: color 0.2s ease-in-out;
   }
