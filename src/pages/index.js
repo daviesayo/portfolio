@@ -4,12 +4,13 @@ import Head from "../components/Head"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Cursor from "../components/Cursor"
+
 function index({ data }) {
   return (
     <div>
       <SEO title={data.title} description={data.description} />
       <Head title="Home" />
-      <Cursor />
+
       <Hero />
     </div>
   )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import classNames from "classnames"
-const isMobile = () => {
+export const isMobile = () => {
   const ua = navigator.userAgent
   return /Android|Mobi/i.test(ua)
 }
@@ -15,7 +15,6 @@ const Cursor = () => {
     handleLinkHoverEvents()
     return () => removeEventListeners()
   }, [])
-  if (typeof navigator !== "undefined" && isMobile()) return null
 
   //Event Listeners
   const addEventListeners = () => {
@@ -76,18 +75,21 @@ const Cursor = () => {
     "cursor--hidden": hidden,
     "cursor--link-hovered": linkHovered,
   })
-
-  return (
-    <div
-      className={cursorClasses}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-      }}
-    >
-      <div className="cursor--inner"></div>
-    </div>
-  )
+  if (typeof navigator !== "undefined" && isMobile()) {
+    return null
+  } else {
+    return (
+      <div
+        className={cursorClasses}
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      >
+        <div className="cursor--inner"></div>
+      </div>
+    )
+  }
 }
 
 export default Cursor
