@@ -75,7 +75,7 @@ const Cursor = () => {
     "cursor--hidden": hidden,
     "cursor--link-hovered": linkHovered,
   })
-  if (typeof navigator !== "undefined" && isMobile()) {
+  if (typeof navigator == "undefined" && isMobile()) {
     return null
   } else {
     return (
