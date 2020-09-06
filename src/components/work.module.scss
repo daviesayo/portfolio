@@ -103,10 +103,13 @@
       cursor: pointer;
       height: 350px;
       width: 100%;
-      // &:hover img {
-      //   height: 120%;
-      //   width: 120%;
-      // }
+      &:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(71, 71, 71, 1) 100%
+        );
+      }
 
       img {
         transition: all 0.5s ease-in-out;

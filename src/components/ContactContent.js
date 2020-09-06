@@ -142,7 +142,13 @@ function ContactContent() {
               className={contactStyles.sub_line2}
             >
               message{" "}
-              <i style={{ color: "red" }} class="fab fa-telegram-plane"></i>
+              <a
+                href="mailto:makintomo04@hotmail.co.uk"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i style={{ color: "red" }} class="fab fa-telegram-plane"></i>
+              </a>
             </div>
           </div>
         </h2>

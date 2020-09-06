@@ -3,11 +3,13 @@ import AboutContent from "../components/AboutContent"
 import Head from "../components/Head"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
+import Cursor from "../components/Cursor"
 function about({ data }) {
   return (
     <div>
       <SEO title="about" description={data.description} />
       <Head title="About" />
+      <Cursor />
       <AboutContent />
     </div>
   )

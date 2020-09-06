@@ -3,11 +3,13 @@ import ContactContent from "../components/ContactContent"
 import Head from "../components/Head"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
+import Cursor from "../components/Cursor"
 function contact({ data }) {
   return (
     <div>
       <SEO title="contact" description={data.description} />
       <Head title="Contact" />
+      <Cursor />
       <ContactContent />
     </div>
   )
