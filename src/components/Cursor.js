@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react"
+import { isMobile } from "react-device-detect"
 import classNames from "classnames"
-export const isMobile = () => {
-  const ua = navigator.userAgent
-  return /Android|Mobi/i.test(ua)
-}
+
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [hidden, setHidden] = useState(false)
@@ -75,7 +73,8 @@ const Cursor = () => {
     "cursor--hidden": hidden,
     "cursor--link-hovered": linkHovered,
   })
-  if (typeof navigator == "undefined" && isMobile()) {
+
+  if (isMobile) {
     return null
   } else {
     return (
