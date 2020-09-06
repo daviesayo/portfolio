@@ -90,7 +90,7 @@ function Hero() {
                       1000,
                       "computer science graduate.",
                       1000,
-                      "3D artist",
+                      "3D artist.",
                       1000,
                       "graphic Designer.",
                       1000,
