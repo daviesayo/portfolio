@@ -9,8 +9,9 @@ const Cursor = () => {
   const [clicked, setClicked] = useState(false)
   const [linkHovered, setLinkHovered] = useState(false)
   const [isMobile, setisMobile] = useState(false)
-  var detector = new MobileDetect(window.navigator.userAgent)
+
   useEffect(() => {
+    var detector = new MobileDetect(window.navigator.userAgent)
     console.log("Mobile: " + detector.mobile())
     console.log("Phone: " + detector.phone())
     console.log("Tablet: " + detector.tablet())
