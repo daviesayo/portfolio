@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { isMobile } from "react-device-detect"
 import classNames from "classnames"
+import { useDeviceDetect } from "../utils/useDeviceDetect"
 
 const Cursor = () => {
+  const { isMobile } = useDeviceDetect
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [hidden, setHidden] = useState(false)
   const [clicked, setClicked] = useState(false)
