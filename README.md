@@ -8,5 +8,5 @@
   My Portfolio Site
 </h1>
 
-Built using GatsbyJS and the a contentful CMS.
-Check out the live site at: https://www.michaelakintomo.com/ 
+<p align="center">Built using GatsbyJS and the a contentful CMS.</p>
+<p align="center">Check out the live site at: https://www.michaelakintomo.com/ </p>
