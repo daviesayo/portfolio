@@ -10,7 +10,7 @@ function index({ data }) {
     <div>
       <SEO title={data.title} description={data.description} />
       <Head title="Home" />
-
+      <Cursor />
       <Hero />
     </div>
   )

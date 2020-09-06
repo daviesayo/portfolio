@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react"
-
-export function useDeviceDetect() {
-  const [isMobile, setMobile] = React.useState(false)
+import MobileDetect from "mobile-detect"
+export default function useDeviceDetect() {
+  const [isMobile, setMobile] = useState(false)
+  var detector = new MobileDetect(window.navigator.userAgent)
   useEffect(() => {
-    const userAgent =
-      typeof navigator === "undefined" ? "" : navigator.userAgent
-    const mobile = Boolean(
-      userAgent.match(
-        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-      )
-    )
-    setMobile(mobile)
+    console.log("Mobile: " + detector.mobile())
+    console.log("Phone: " + detector.phone())
+    console.log("Tablet: " + detector.tablet())
+    console.log("OS: " + detector.os())
+    console.log("userAgent: " + detector.userAgent())
   }, [])
-  return { isMobile }
 }

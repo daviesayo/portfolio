@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from "react"
 import classNames from "classnames"
-import { useDeviceDetect } from "../utils/useDeviceDetect"
-
+import useDeviceDetect from "../utils/useDeviceDetect"
+import MobileDetect from "mobile-detect"
 const Cursor = () => {
-  const { isMobile } = useDeviceDetect
+  // const { isMobile, a, detect } = useDeviceDetect
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [hidden, setHidden] = useState(false)
   const [clicked, setClicked] = useState(false)
   const [linkHovered, setLinkHovered] = useState(false)
-
+  const [isMobile, setisMobile] = useState(false)
+  var detector = new MobileDetect(window.navigator.userAgent)
+  useEffect(() => {
+    console.log("Mobile: " + detector.mobile())
+    console.log("Phone: " + detector.phone())
+    console.log("Tablet: " + detector.tablet())
+    console.log("OS: " + detector.os())
+    console.log("userAgent: " + detector.userAgent())
+    if (detector.mobile() === null) {
+      console.log("not a mobile or tablet.")
+      setisMobile(false)
+    } else {
+      console.log("is a mobile")
+      setisMobile(true)
+    }
+  }, [])
   useEffect(() => {
     addEventListeners()
     handleLinkHoverEvents()
@@ -74,10 +89,7 @@ const Cursor = () => {
     "cursor--hidden": hidden,
     "cursor--link-hovered": linkHovered,
   })
-
-  if (isMobile) {
-    return null
-  } else {
+  if (!isMobile) {
     return (
       <div
         className={cursorClasses}
@@ -89,6 +101,8 @@ const Cursor = () => {
         <div className="cursor--inner"></div>
       </div>
     )
+  } else {
+    return null
   }
 }
 

@@ -4,7 +4,9 @@ import Head from "../components/Head"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import Cursor from "../components/Cursor"
+import useDeviceDetect from "../utils/useDeviceDetect"
 function about({ data }) {
+  const { isMobile } = useDeviceDetect
   return (
     <div>
       <SEO title="about" description={data.description} />
