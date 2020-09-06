@@ -7,7 +7,7 @@ import Cursor from "../components/Cursor"
 function contact({ data }) {
   return (
     <div>
-      <SEO title="contact" description={data.description} />
+      <SEO title="contact" description={data.site.siteMetadata.description} />
       <Head title="Contact" />
       <Cursor />
       <ContactContent />

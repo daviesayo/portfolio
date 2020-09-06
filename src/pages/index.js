@@ -8,7 +8,10 @@ import Cursor from "../components/Cursor"
 function index({ data }) {
   return (
     <div>
-      <SEO title={data.title} description={data.description} />
+      <SEO
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+      />
       <Head title="Home" />
       <Cursor />
       <Hero />
