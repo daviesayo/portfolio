@@ -12,16 +12,9 @@ const Cursor = () => {
 
   useEffect(() => {
     var detector = new MobileDetect(window.navigator.userAgent)
-    console.log("Mobile: " + detector.mobile())
-    console.log("Phone: " + detector.phone())
-    console.log("Tablet: " + detector.tablet())
-    console.log("OS: " + detector.os())
-    console.log("userAgent: " + detector.userAgent())
     if (detector.mobile() === null) {
-      console.log("not a mobile or tablet.")
       setisMobile(false)
     } else {
-      console.log("is a mobile")
       setisMobile(true)
     }
   }, [MobileDetect])
