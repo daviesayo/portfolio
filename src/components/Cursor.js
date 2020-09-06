@@ -24,7 +24,7 @@ const Cursor = () => {
       console.log("is a mobile")
       setisMobile(true)
     }
-  }, [])
+  }, [detector])
   useEffect(() => {
     addEventListeners()
     handleLinkHoverEvents()
