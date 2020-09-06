@@ -24,12 +24,12 @@ const Cursor = () => {
       console.log("is a mobile")
       setisMobile(true)
     }
-  }, [detector])
+  }, [MobileDetect])
   useEffect(() => {
     addEventListeners()
     handleLinkHoverEvents()
     return () => removeEventListeners()
-  }, [])
+  }, [MobileDetect])
 
   //Event Listeners
   const addEventListeners = () => {
