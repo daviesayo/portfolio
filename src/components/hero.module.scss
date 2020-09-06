@@ -133,7 +133,7 @@
   text-align: center;
 }
 .blinds {
-  height: 100%;
+  height: auto;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -141,7 +141,7 @@
   // display: none; //
 }
 .blind {
-  height: auto;
+  height: 100vh;
   width: 100%;
   background: black;
 }
