@@ -73,15 +73,14 @@ body {
 .cursor--hidden {
   opacity: 0;
 }
-.cursor--clicked {
-  transform: translate(-50%, -50%) scale(0.9);
-  background-color: rgb(255, 0, 0);
-}
 .cursor--link-hovered {
   transform: translate(-50%, -50%) scale(1.1);
   background-color: rgba(255, 0, 0, 0.356);
 }
-
+.cursor--clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: rgb(255, 0, 0);
+}
 .container {
   max-width: 1440px;
   width: 100%;
