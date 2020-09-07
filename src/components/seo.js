@@ -48,7 +48,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: icon,
+          content: `https://www.michaelakintomo.com/static/pesonal_dev_logo2-ddd3789c1af91313b25df2676be31437.png`,
         },
         {
           name: `twitter:card`,
