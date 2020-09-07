@@ -75,6 +75,9 @@
   @include media("<=lgPhone") {
     font-size: 7rem;
   }
+  @include media("<=phone") {
+    font-size: 6.2rem;
+  }
 }
 
 .gridContainer {
